@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.absolute-card{
+  position: absolute;
+  top:60%;
+  left: 35vw;
+}

@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Card from './components/Card/Card';
+import FoodList from './components/FoodList/FoodList';
+import Header from './components/Header/Header';
+import {DUMMY_MEALS} from './data/dummy-meals'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex flex-col justify-center items-center">
+      <Header />
+      <Card className="bg-gray-700 w-1/2 ">
+        <h1 className='text-white'>Welcome to Food Order Application</h1>
+        <h2 className='text-white'>Below you can choose your meal from our selection. Enjoy!</h2>
+      </Card>
+      
+      <FoodList meals={DUMMY_MEALS} />
+      
+      
     </div>
   );
 }
